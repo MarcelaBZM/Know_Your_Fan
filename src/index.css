@@ -1,0 +1,72 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 43% 10%;
+    --foreground: 210 40% 98%;
+    --card: 220 43% 10%;
+    --card-foreground: 210 40% 98%;
+    --popover: 220 43% 10%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 12 76% 51%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 12 76% 51%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 12 76% 51%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 12 76% 51%;
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+.furia-gradient {
+  background: linear-gradient(135deg, #1a1f2c 0%, #2d3748 100%);
+  position: relative;
+}
+
+.furia-gradient::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, rgba(239, 68, 68, 0.1) 0%, rgba(239, 68, 68, 0) 100%);
+  pointer-events: none;
+}
+
+.card-hover {
+  transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(239, 68, 68, 0.2);
+}
+
+.furia-border {
+  border: 2px solid rgba(239, 68, 68, 0.5);
+}
+
+.furia-glow {
+  box-shadow: 0 0 20px rgba(239, 68, 68, 0.2);
+}
